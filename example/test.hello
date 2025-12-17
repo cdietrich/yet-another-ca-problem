@@ -1,0 +1,8 @@
+
+http-endpoint xxxx {
+    @description(true)
+    @description(true)
+    public read action demo {
+
+    }
+}
