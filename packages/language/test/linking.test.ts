@@ -35,6 +35,22 @@ http-endpoint Orders {
         const text = `
 
 http-endpoint Orders {
+    <|>
+    public write action demo {}
+}
+`
+
+    await expectCompletion({
+      index: 0,
+      text,
+      assert: expectCompletionItems(["@"]),
+    })
+    });
+
+    test('dummy 2', async () => {
+        const text = `
+
+http-endpoint Orders {
     @description(true)
     <|>
     public write action demo {}
