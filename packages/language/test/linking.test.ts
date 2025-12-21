@@ -19,7 +19,7 @@ describe('Linking tests', () => {
     test('dummy 0', async () => {
         const text = `
 
-<|≥
+<|>
 http-endpoint Orders {
 }
 `
@@ -27,7 +27,7 @@ http-endpoint Orders {
     await expectCompletion({
       index: 0,
       text,
-      assert: expectCompletionItems(["description"]),
+      assert: expectCompletionItems(["@", "http-endpoint"]),
     })
     });
 
